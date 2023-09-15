@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Car Showroom</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="car.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Super Cars</h1>
+          </div>
+          
+        <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Home</a>
+            <a href="file:///C:/Users/student/Desktop/NNM22CS106/News.html">News</a>
+            <a href="file:///C:/Users/student/Desktop/NNM22CS106/About%20Us.html">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+          
+          <div style="padding-left:16px">
+            
+          </div>
+          
+          <script>
+          function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+              x.className += " responsive";
+            } else {
+              x.className = "topnav";
+            }
+          }
+          </script>
+          
+         <div class="footer">
+            
+                
+                    <p1 style="text-decoration: underline;">Contact Us:7619419662</p1>
+                    <br>
+                    <p2 style="text-decoration: underline;">E-mail    :lewisnestor.17@gmail.com</p2>
+                
+            
+          </div>
+          <div class="container">
+            
+            <p>Please Select Your Choice Of Car:</p>  
+            <input class="form-control" id="myInput" type="text" placeholder="Search..">
+            <br>
+            <ul class="list-group" id="myList">
+              <li class="list-group-item"><a href="file:///C:/Users/student/Desktop/NNM22CS106/suv.html" class="active">SUV</a></li>
+              <li class="list-group-item"><a href="file:///C:/Users/student/Desktop/NNM22CS106/Sport.html" class="active">SPORT</a></li>
+              <li class="list-group-item"><a href="file:///C:/Users/student/Desktop/NNM22CS106/F1.html" class="active">F1</a></li>
+              <li class="list-group-item"><a href="file:///C:/Users/student/Desktop/NNM22CS106/sedan.html" class="active">SEDAN</a></li>
+            </ul>  
+          </div>
+          
+          <script>
+          $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+              var value = $(this).val().toLowerCase();
+              $("#myList li").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+              });
+            });
+          });
+          </script>
+          
+
+    </body>
+</html>
